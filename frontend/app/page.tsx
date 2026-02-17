@@ -298,7 +298,7 @@ export default function Home() {
                       className="flex items-center gap-2 px-3 py-1.5 bg-gradient-to-r from-purple-500/20 to-indigo-500/20 hover:from-purple-500/30 hover:to-indigo-500/30 border border-purple-500/30 text-purple-200 text-xs font-bold rounded-lg transition-all animate-shimmer"
                     >
                       {isDeepLoading ? <RefreshCw className="w-3 h-3 animate-spin" /> : <Sparkles className="w-3 h-3 text-purple-300" />}
-                      {isDeepLoading ? "Consulting..." : "Unlock Deep Book ($5)"}
+                      {isDeepLoading ? "Consulting..." : "Unlock Deep Book ($4.99)"}
                     </button>
                     {/* Combo Box */}
                     <div className="relative">
@@ -430,13 +430,13 @@ export default function Home() {
                 Reveal the full secrets of your fate, including a 2026 forecast and hidden strengths.
               </p>
               <div className="mb-6">
-                <div className="text-4xl font-bold mb-2">$5.00</div>
+                <div className="text-4xl font-bold mb-2">$4.99</div>
                 <div className="text-sm text-gray-400">One-time payment</div>
               </div>
 
               <div className="w-full relative z-10">
                 <PayPalButton
-                  amount="5.00"
+                  amount="4.99"
                   onSuccess={handlePaymentSuccess}
                 />
               </div>
