@@ -19,7 +19,8 @@ app = FastAPI()
 # Configure CORS
 origins = [
     "http://localhost:3000",
-    "https://your-frontend-deployment-url.vercel.app" # Placeholder for future deployment
+    "https://soul-stat-z6lj.vercel.app",
+    "https://soul-stat.vercel.app" 
 ]
 
 app.add_middleware(
