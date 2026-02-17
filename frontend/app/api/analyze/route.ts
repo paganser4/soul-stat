@@ -1,8 +1,4 @@
 import { NextResponse } from 'next/server';
-import { exec } from 'node:child_process';
-import util from 'node:util';
-
-const execPromise = util.promisify(exec);
 
 export async function POST(request: Request) {
     try {
@@ -13,33 +9,32 @@ export async function POST(request: Request) {
             return NextResponse.json({ error: 'Birth date is required' }, { status: 400 });
         }
 
-        // Call the Python script
-        // Note: Adjust the python path and script path as needed for your environment
-        const pythonScriptPath = 'c:\\Users\\lg\\사주 프로그램 만들기\\backend\\saju_engine.py';
+        // Backend URL (Environment variable or default to localhost for development)
+        // Ensure BACKEND_URL in Vercel is set to https://soul-stat-backend.onrender.com (no trailing slash)
+        const BACKEND_URL = process.env.BACKEND_URL || 'http://127.0.0.1:8000';
 
-        // Execute with arguments: date and time
-        // Set PYTHONIOENCODING to utf-8 to ensure correct output on Windows
-        const { stdout, stderr } = await execPromise(`python "${pythonScriptPath}" "${birthDate}" "${birthTime}"`, {
-            env: { ...process.env, PYTHONIOENCODING: 'utf-8' }
+        console.log(`Proxying request to: ${BACKEND_URL}/analyze`);
+
+        // Call the FastAPI backend
+        const response = await fetch(`${BACKEND_URL}/analyze`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ birthDate, birthTime }),
         });
 
-        if (stderr) {
-            console.error('Python Error:', stderr);
+        if (!response.ok) {
+            const errorText = await response.text();
+            console.error('Backend Error:', errorText);
+            return NextResponse.json({ error: `Backend failed: ${response.status}` }, { status: response.status });
         }
 
-        console.log('Python Output:', stdout);
-
-        try {
-            const result = JSON.parse(stdout);
-            return NextResponse.json(result);
-        } catch (parseError) {
-            console.error('JSON Parse Error:', parseError);
-            console.error('Raw Output:', stdout);
-            return NextResponse.json({ error: 'Failed to parsing analysis result' }, { status: 500 });
-        }
+        const data = await response.json();
+        return NextResponse.json(data);
 
     } catch (error) {
-        console.error('API Error:', error);
+        console.error('API Proxy Error:', error);
         return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 });
     }
 }
