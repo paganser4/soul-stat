@@ -1,0 +1,80 @@
+{
+    "classes": {
+        "Wood": "Forest Guardian",
+        "Fire": "Flame Walker",
+        "Earth": "Mountain Sage",
+        "Metal": "Iron Will",
+        "Water": "Abyssal Seeker"
+    },
+    "class_descriptions": {
+        "Wood": "You embody the spirit of the Forest Guardian. Like an ancient oak with roots deep in the earth and branches reaching for the heavens, you are a symbol of growth, benevolence, and upward momentum. Your presence is nurturing, providing shelter and guidance to those around you. You possess an innate drive to expand, to learn, and to cultivate potential in both yourself and others.",
+        "Fire": "You are the Flame Walker, a beacon of light in the darkness. Your energy is radiant, explosive, and impossible to ignore. Like the sun at its zenith, you bring warmth, clarity, and passion to every aspect of your life. You are the spark that ignites revolution and the hearth that comforts the weary. Your spirit is one of perpetual motion and transformation.",
+        "Earth": "You stand as the Mountain Sage, grounded, unshakeable, and vast. You are the foundation upon which civilisations are built. Your nature is reliability and profound patience. In a chaotic world, you offer a sanctuary of trust and stability. You absorb the diverse energies around you and hold the center with quiet authority.",
+        "Metal": "You are the Iron Will, forged in the fires of discipline and precision. Your mind is a blade that cuts through illusion to reveal the truth. You value justice, structure, and perfection. Like a polished gem or a formidable weapon, you are durable, brilliant, and unyielding in your principles. You are the architect of order.",
+        "Water": "You are the Abyssal Seeker, as deep and mysterious as the ocean. Your wisdom flows from the unseen depths of intuition. You are adaptable yet unstoppable, capable of wearing away the hardest stone through persistence. You understand the fluid nature of reality and navigate the currents of life with profound insight and philosophical depth."
+    },
+    "interpretations": {
+        "personality": {
+            "Wood": "Your essence is defined by benevolence and vision. You are a natural-born planner, always looking toward the horizon with optimism and a desire for progress. Like a tree that must bend with the wind to survive, your greatest strength lies in your ability to grow and adapt, yet you must guard against becoming too rigid or stubborn in your ideals. You have a compassionate heart and a strong moral compass, often stepping up to lead or mentor others not out of a desire for power, but out of a genuine wish to see them flourish. However, your ambition can sometimes manifest as impatience or frustration when results do not appear immediately. Cultivate patience, for the mightiest forests take time to mature.",
+            "Fire": "Your personality is a dazzling display of emotion, etiquette, and intellect. You are polite, expressive, and often the life of the party. You process information rapidly and react with immediate, genuine feeling, making you incredibly transparent and authentic. People are drawn to your charisma and warmth. You value propriety and ritual, often upholding social norms while simultaneously pushing boundaries with your creative energy. The danger for you lies in burnout; your intensity can consume you if not managed. You may also struggle with impulsiveness or a quick temper. Learning to temper your fire with moments of quiet reflection will ensure your light endures without consuming your fuel.",
+            "Earth": "Trust is your currency, and stability is your domain. You are the person everyone relies on—the confidant, the mediator, the rock. You possess a practical, realistic mind that prefers tangible results over abstract theories. Your patience is legendary; you can wait out storms that would break others. However, this stability can sometimes turn into stagnation or stubbornness. You may hold onto grudges or worries, burying them deep within like strata in the earth. You have a nurturing spirit, often placing the needs of others above your own, but you must remember that even the earth needs to be revitalized. Do not be afraid to express your own needs and to shift your ground when necessary.",
+            "Metal": "You are defined by a strong sense of justice, duty, and decision. You view the world through a lens of clarity and structure. You are efficient, organized, and uncompromising in your standards. You cut through confusion and ambiguity with logic and reason. While some may perceive you as cool or distant, your loyalty to those you respect is absolute. You are a finisher, someone who gets things done with precision. Your challenge is to balance your sharp intellect with empathy. Perfection is an impossible goal, and your tendency to be critical of yourself and others can create unnecessary friction. Learn to embrace the imperfections of life as part of its beauty.",
+            "Water": "Wisdom, adaptability, and depth characterize your soul. You are intellectually curious, contrasting a calm exterior with a mind that is constantly churning with ideas and strategies. Like water, you can fit into any container, adapting to any social situation with ease, yet you never lose your essential nature. You value freedom and flow, often resisting rigid structures or constraints. You have a rich inner emotional life that you guard carefully. Your intuition is powerful, often bordering on relationships. Be wary of becoming too secretive or manipulative in your desire to control the flow. Trust that revealing your true depths will bring you closer to others, not drown them."
+        },
+        "wealth": {
+            "Wood": "Wealth for you is a byproduct of growth and creation. You prosper when you build, educate, or initiate. Long-term investments in developing assets—whether it be real estate development, education, forestry, or founding startups—align perfectly with your energy. You are not suited for speculation; your wealth accumulates as your creations mature.",
+            "Fire": "Your financial success is tied to visibility and trends. You thrive in fast-paced markets where timing is everything. Tech, media, entertainment, and fashion are fields where your ability to spot the next big thing can yield high returns. However, money tends to burn a hole in your pocket. You must learn disciplined saving strategies to retain the wealth you generate.",
+            "Earth": "Real assets are your key to wealth. Land, property, and commodities are the most favorable avenues for you. You are a natural accumulator. Wealth comes to you through trust-based businesses, intermediation, and providing essential services. Avoid risky, intangible ventures. Your path to riches is slow, steady, and inevitable.",
+            "Metal": "You excel in competitive and precision-based financial environments. Finance, law, surgery, and high-end engineering are lucrative paths. You have a knack for cutting costs and optimizing systems. Your wealth is built on structural efficiency and professional expertise. You are good at managing money, but ensure you enjoy it too.",
+            "Water": "Flow is essential for your wealth. Trade, logistics, shipping, travel, and the beverage industry are highly auspicious. You also possess the intellect for data analysis and intellectual property. Your wealth comes from movement—moving goods, moving data, or moving ideas. Stagnation is the enemy of your prosperity."
+        },
+        "career": {
+            "Wood": "You are a builder and a visionary. Architect, Writer, Educator, Designer, Planner, Environmentalist.",
+            "Fire": "You are a performer and an innovator. Artist, Entertainer, Marketer, Tech Entrepreneur, Pilot.",
+            "Earth": "You are a stabilizer and a nurturer. Real Estate Agent, Administrator, Farmer, Insurance Broker, Consultant.",
+            "Metal": "You are an executor and a judge. Surgeon, Judge, Military Officer, Engineer, Financial Analyst.",
+            "Water": "You are a strategist and a philosopher. Researcher, Diplomat, Trader, Psychologist, Writer."
+        },
+        "health": {
+            "Wood": "Focus on your liver, gallbladder, and nervous system. Stress manifests as muscle tension. Yoga and anger management are vital.",
+            "Fire": "Guard your heart, blood pressure, and small intestine. You are prone to burnout. Meditation and cooling foods are essential.",
+            "Earth": "Care for your stomach, spleen, and digestion. Avoid overthinking and worry. Regular, warm meals are your medicine.",
+            "Metal": "Protect your lungs, skin, and large intestine. Dryness is your enemy. Deep breathing and hydration are key.",
+            "Water": "Watch your kidneys, bladder, and reproductive health. Cold affects you deeply. Keep warm and rest well to recharge."
+        },
+        "love": {
+            "Wood": "You seek growth in love. You are supportive and kind, often taking a nurturing role.",
+            "Fire": "You love with intensity and passion. You need a partner who can match your fire.",
+            "Earth": "You offer stability and loyalty. You seek a long-term, grounded partnership.",
+            "Metal": "You value loyalty and duty. You commit deeply once trust is established.",
+            "Water": "You seek a deep spiritual connection. You are romantic, mysterious, and adaptable."
+        }
+    },
+    "insights": {
+        "Wood": [
+            "Your roots define your reach. The deeper you go into your own truth, the higher you can rise.",
+            "Patience is not passive waiting; it is active growing. Trust the timing of your life.",
+            "Benevolence is your superpower. In a world of takers, be the one who gives shade."
+        ],
+        "Fire": [
+            "You are the light of the world, but even the sun sets. Rest is not defeat; it is renewal.",
+            "Let your passion warm others, not scorch them. Controlled fire creates; uncontrolled fire destroys.",
+            "Your authenticity is magnetic. Never dim your light to make others comfortable."
+        ],
+        "Earth": [
+            "You are the mountain that weathers the storm. Your strength lies in your stillness.",
+            "Trust is earned in drops and lost in buckets. Guard your integrity as your most precious asset.",
+            "Do not carry the weight of the world alone. Even the earth rests on the bedrock beneath."
+        ],
+        "Metal": [
+            "A sharp mind without a soft heart is a dangerous weapon. Balance justice with mercy.",
+            "Discipline is the bridge between goals and accomplishment. Walk it with pride.",
+            "Refine yourself daily. You are both the sculptor and the statue."
+        ],
+        "Water": [
+            "Be like water: soft enough to flow, hard enough to crush stone. Adaptability is ultimate strength.",
+            "Your wisdom is a deep well. Don't be afraid to draw from it and share it with the thirsty.",
+            "Flow around obstacles. The river does not fight the rock; it simply finds a way around."
+        ]
+    }
+}

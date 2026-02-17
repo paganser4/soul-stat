@@ -1,0 +1,35 @@
+# Common Python ignores
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+env/
+.env
+
+# Common JavaScript/Next.js ignores
+node_modules/
+.next/
+out/
+build/
+dist/
+.DS_Store
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnp
+.pnp.js
+coverage/
+.nyc_output/
+
+# Project specific
+frontend/.env.local
+backend/.env
+backend/.venv
+
+# Editor directories
+.idea/
+.vscode/
+*.swp
+*.swo
