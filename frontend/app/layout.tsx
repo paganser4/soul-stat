@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Noto_Sans_KR, Noto_Serif_KR, Outfit } from "next/font/google"; // Import Serif font
+import { Geist, Geist_Mono, Noto_Sans_KR, Noto_Serif_KR, Outfit } from "next/font/google";
+import { Toaster } from "sonner";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -47,7 +48,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" translate="no">
-      <body className={`${geistSans.variable} ${geistMono.variable} ${notoSansKR.variable} ${notoSerifKR.variable} ${outfit.variable} antialiased font-sans bg-background text-foreground`}>{children}</body>
+      <body className={`${geistSans.variable} ${geistMono.variable} ${notoSansKR.variable} ${notoSerifKR.variable} ${outfit.variable} antialiased font-sans bg-background text-foreground`}>
+        {children}
+        <Toaster richColors position="top-center" />
+      </body>
     </html>
   );
 }
