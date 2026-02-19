@@ -1,22 +1,19 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Noto_Sans_KR, Noto_Serif_KR, Outfit } from "next/font/google";
+import { Inter, Cinzel, Noto_Sans_KR, Noto_Serif_KR } from "next/font/google";
 import { Toaster } from "sonner";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-const outfit = Outfit({
-  variable: "--font-outfit",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
   display: "swap",
+});
+
+const cinzel = Cinzel({
+  variable: "--font-cinzel",
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["400", "500", "600", "700", "800", "900"],
 });
 
 const notoSansKR = Noto_Sans_KR({
@@ -26,7 +23,7 @@ const notoSansKR = Noto_Sans_KR({
   preload: false,
 });
 
-const notoSerifKR = Noto_Serif_KR({ // Configure Serif font
+const notoSerifKR = Noto_Serif_KR({
   variable: "--font-noto-serif-kr",
   weight: ["200", "300", "400", "500", "600", "700", "900"],
   subsets: ["latin"],
@@ -34,8 +31,8 @@ const notoSerifKR = Noto_Serif_KR({ // Configure Serif font
 });
 
 export const metadata: Metadata = {
-  title: "Soul Saju Analysis", // Updated title for better context
-  description: "Discover your destiny with ancient wisdom.",
+  title: "Soul Stat — Destiny Analysis",
+  description: "Unlock the secrets of your Four Pillars with Soul Stat.",
   other: {
     google: "notranslate",
   },
@@ -48,7 +45,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" translate="no">
-      <body className={`${geistSans.variable} ${geistMono.variable} ${notoSansKR.variable} ${notoSerifKR.variable} ${outfit.variable} antialiased font-sans bg-background text-foreground`}>
+      <body
+        className={`${inter.variable} ${cinzel.variable} ${notoSansKR.variable} ${notoSerifKR.variable} antialiased`}
+      >
         {children}
         <Toaster richColors position="top-center" />
       </body>

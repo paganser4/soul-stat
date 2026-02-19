@@ -4,3 +4,4 @@ python-dotenv
 google-generativeai
 ephem
 pydantic
+requests

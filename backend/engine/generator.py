@@ -6,11 +6,18 @@ Enhanced with classical Saju text references (Sona's recommendation).
 import os
 import sys
 from datetime import datetime
-import google.generativeai as genai
+import google.genai as genai
+from google.genai import types
 
 # Configure GenAI
-if "GOOGLE_API_KEY" in os.environ:
-    genai.configure(api_key=os.environ["GOOGLE_API_KEY"])
+_client = None
+def _get_client():
+    global _client
+    if _client is None:
+        api_key = os.environ.get("GOOGLE_API_KEY")
+        if api_key:
+            _client = genai.Client(api_key=api_key)
+    return _client
 
 # Enhanced Myungseon Persona with Classical References (소나의 제안 반영)
 MYUNGSEON_PERSONA = """
@@ -55,14 +62,13 @@ class DeepReportGenerator:
         current_year = datetime.now().year
         current_date_str = datetime.now().strftime("%Y-%m-%d")
 
-        if "GOOGLE_API_KEY" not in os.environ:
+        client = _get_client()
+        if client is None:
             return (
                 "## Error\n\n"
                 "Google API Key is missing. Please configure the "
                 "GOOGLE_API_KEY environment variable to unlock the Deep Destiny Report."
             )
-
-        model = genai.GenerativeModel('gemini-flash-latest')
 
         prompt = f"""
         {MYUNGSEON_PERSONA}
@@ -86,9 +92,12 @@ class DeepReportGenerator:
         """
 
         try:
-            response = model.generate_content(prompt)
+            response = client.models.generate_content(
+                model="gemini-2.0-flash",
+                contents=prompt,
+            )
 
-            if hasattr(response, 'usage_metadata'):
+            if hasattr(response, 'usage_metadata') and response.usage_metadata:
                 usage = response.usage_metadata
                 sys.stderr.write(
                     f"[Token Usage] Input: {usage.prompt_token_count}, "

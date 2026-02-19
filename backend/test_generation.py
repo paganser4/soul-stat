@@ -11,9 +11,9 @@ if not api_key:
     print("API Key NOT FOUND")
 else:
     genai.configure(api_key=api_key)
-    print(f"Testing generation with gemini-flash-latest...")
+    print("Testing generation with gemini-2.0-flash...")
     try:
-        model = genai.GenerativeModel('gemini-flash-latest')
+        model = genai.GenerativeModel('gemini-2.0-flash')
         response = model.generate_content("Hello, say 'The spirits are listening' if you can hear me.")
         print(f"Response: {response.text}")
     except Exception as e:
